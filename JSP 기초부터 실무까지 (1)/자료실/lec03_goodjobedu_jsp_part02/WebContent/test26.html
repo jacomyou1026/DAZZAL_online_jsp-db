@@ -1,0 +1,111 @@
+<!-- 
+<form></form> 
+  회원 가입, 로그인 등의 사용자 입력/선택이 필요한 경우 사용하는 입력폼 
+	속성 :
+		NAME : 해당 form의 이름
+		METHOD : 폼의 전송방식 (POST,GET)
+			METHOD 속성의 값 : 
+			1. POST : 본문에 데이터를 담아 전송하는 타입
+			2. GET : 주소를 이용한 전송타입
+		ACTION : 폼이 전송될 목적지 페이지
+	
+	** FORM 태그의 서브 태그 
+	1. <INPUT> 
+	속성 : 
+		TYPE 
+	값 : 
+		TEXT : 일반 텍스트 입력 
+		PASSWORD : 비밀번호 (*로 표시됨)
+		HIDDEN : 숨겨진 필드 (사용자에게 보여지지는 않는 데이터에 사용)
+		CHECKBOX : 선택 (네모칸)
+		RADIO : 라디오 버튼 (동그란 칸)
+		FILE : 파일 첨부
+		SUBMIT : 폼 값을 전송 (확인)
+		RESET : 폼 리셋 (취소)
+		IMAGE : 이미지
+		
+	2. <TEXTAREA></TEXTAREA> 
+	속성 : 
+		NAME : 텍스트 영역의 이름을 부여
+		ROWS : 텍스트 영역의 높이 
+		COLS : 텍스트 영역의 가로길이
+		
+	3. <SELECT></SELECT>
+		e.g. 메일 주소 선택할 때
+	속성 : 
+		NAME : 셀렉트 태그의 이름을 부여
+		SIZE : 보여줄 항목의 개수 지정
+		MULTIPLE : 복수 선택 가능
+ -->
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<form>
+	input01 - text<br>
+	<input type = "text" name="user" size ="20" maxlength = "10" value = "kim">
+	<!-- maxlength : 최대 수용 길이  -->
+	
+	<hr><!-- 선 추가 -->
+	input02 - password<br>
+	<input type = "password" name="pwd" size ="20" maxlength = "10" >
+	
+	<hr><!-- 선 추가 -->
+	input03 - checkbox<br>
+	<input type = "checkbox" name="chk" value = "book">독서<br>
+	<input type = "checkbox" name="chk" value = "food">먹기<br>
+	<input type = "checkbox" name="chk" value = "game">게임<br>
+	
+	<hr><!-- 선 추가 -->
+	input04 - checkbox 미리 체크(checked)<br>
+	<input type = "checkbox" name="chk" value = "book" checked>독서<br>
+	<input type = "checkbox" name="chk" value = "food">먹기<br>
+	<input type = "checkbox" name="chk" value = "game">게임<br>
+	
+	<hr><!-- 선 추가 -->
+	input05 - radio<br>
+	<input type = "radio" name="hobby" value = "book">독서<br>
+	<input type = "radio" name="hobby" value = "food">먹기<br>
+	<input type = "radio" name="hobby" value = "game">게임<br>
+	
+	<hr><!-- 선 추가 -->
+	input06 - radio  미리 체크(checked)<br>
+	<input type = "radio" name="hobby" value = "book">독서<br>
+	<input type = "radio" name="hobby" value = "food">먹기<br>
+	<input type = "radio" name="hobby" value = "game" checked>게임<br>
+	
+	 <hr><!-- 선 추가 -->
+	input07 - file <br>
+	<input type = "file">
+	
+	<hr><!-- 선 추가 -->
+	input08 - submit, reset <br>
+	<input type = "submit"><br>
+	<input type = "submit" value ="전송"><br>
+	<input type = "reset"><br>
+	<input type = "reset" value = "취소"><br>
+	
+	<hr><!-- 선 추가 -->
+	input09 - button, image <br>
+	<input type = "button" value = "이것은 버튼입니다.."><br>
+	<input type = "image" src ="aa.png"><br>
+	
+	<hr><!-- 선 추가 -->
+	textarea01<br>
+	<textarea name = "content" rows = "4" cols = "30">하이하이하이~~</textarea>
+	
+	<hr><!-- 선 추가 -->
+	select01<br>
+	<select name = "meat" size = "2">
+		<option value = "beef">소고기</option>
+		<option value = "pork">돼지고기</option>
+		<option value = "chicken">닭고기</option>
+		<!-- 선택된 항목의 value만 전송됨 -->
+	</select>
+	</form>
+</body>
+</html>
+ 

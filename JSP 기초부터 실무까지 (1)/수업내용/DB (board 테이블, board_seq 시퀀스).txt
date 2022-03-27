@@ -1,0 +1,13 @@
+테이블 추가>>>>>
+CREATE TABLE board (
+	num	NUMBER 		PRIMARY KEY,
+	title	VARCHAR2(2000) 	NOT NULL, 
+	content	VARCHAR2(4000) 	NOT NULL, 
+	writer	VARCHAR2(20) 	NOT NULL,
+	nickname VARCHAR2(40) 	NOT NULL,
+	hit	NUMBER		DEFAULT 0 NOT NULL, 
+	regdate	DATE 		NOT NULL
+);
+시퀀스 추가>>>>>
+CREATE SEQUENCE board_seq;
+
